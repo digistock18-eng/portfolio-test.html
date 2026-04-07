@@ -551,6 +551,31 @@ img {
   }
 
 }
+@media (max-width: 768px) {
+
+  .work-container {
+    display: block; /* grid override */
+  }
+
+  .work-card {
+    position: sticky;
+    top: 90px;
+    width: 90%;
+    margin: 0 auto 50px;
+    z-index: 1;
+  }
+
+  .work-card:nth-child(1) { z-index: 6; }
+  .work-card:nth-child(2) { z-index: 5; }
+  .work-card:nth-child(3) { z-index: 4; }
+  .work-card:nth-child(4) { z-index: 3; }
+  .work-card:nth-child(5) { z-index: 2; }
+  .work-card:nth-child(6) { z-index: 1; }
+
+}
+    .work-card {
+  transition: transform 0.3s ease;
+}
   </style>
 </head>
 
@@ -794,21 +819,6 @@ window.addEventListener('load', updateFocus);
     <script>
 const workCards = document.querySelectorAll('.work-card');
 
-function stackEffect() {
-  let scrollY = window.scrollY;
-
-  workCards.forEach((card, index) => {
-    let offset = index * 100;
-
-    if (scrollY > offset) {
-      card.style.transform = `translateY(${index * -20}px) scale(${1 - index * 0.05})`;
-      card.style.opacity = 1 - index * 0.1;
-    }
-  });
-}
-
-window.addEventListener('scroll', stackEffect);
-</script>
   
 </script>
 </body>
