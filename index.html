@@ -374,10 +374,25 @@
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
+
   .service-grid {
     grid-template-columns: 1fr;
   }
+
+  /* ADD THIS */
+  .work-container {
+    display: block !important;
+  }
+
+  .work-card {
+    position: sticky;
+    top: 100px;
+    width: 90%;
+    margin: 0 auto 60px;
+    z-index: 1;
+  }
+
 }
    .card {
   transition: all 0.35s ease;
