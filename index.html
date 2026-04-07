@@ -304,7 +304,81 @@
   justify-content: center;
   margin: 0 auto 12px;
 }
+/* GRID */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 3rem;
+}
 
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ICON */
+.card i {
+  color: #E63946;
+  font-size: 20px;
+
+  width: 50px;
+  height: 50px;
+  background: rgba(230,57,70,0.1);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.card h3 {
+  color: #001F3F;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.card p {
+  color: #5A5A5A;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* LIST */
+.card ul {
+  padding-left: 18px;
+  margin-top: auto;
+}
+
+.card ul li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #001F3F;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s ease;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
    .card {
   transition: all 0.35s ease;
   position: relative;
@@ -314,15 +388,7 @@
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
 }
-   .card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  background: radial-gradient(circle at center, rgba(230,57,70,0.15), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+  
 
 .card:hover::after {
   opacity: 1;
@@ -502,45 +568,95 @@ img {
       <p>I&#39;m a Branding &amp; Creative Specialist focused on building impactful digital brands.</p>
     </div>
   </section>
+<section id="services" class="services section bg-light">
+  <div class="container">
+    <h2>What I Offer</h2>
+    <p class="sub">End-to-end creative solutions designed to build and grow your brand.</p>
 
-  <section id="services" class="services section bg-light">
-    <div class="container">
-      <h2>What I Offer</h2>
-      <p class="sub">End-to-end creative solutions designed to build and grow your brand.</p>
-        <div class="service-grid">
-        <div class="card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Brand Strategy &amp; Identity</h3>
-          <p>Building strong brand foundations and visual identity systems.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-share-alt"></i>
-          <h3>Social Media &amp; Marketing</h3>
-          <p>Growth-focused content and marketing strategies.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-video"></i>
-          <h3>Video &amp; Motion Content</h3>
-          <p>High-quality motion graphics and storytelling.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-globe"></i>
-          <h3>Web &amp; UI/UX Design</h3>
-          <p>Modern, conversion-focused digital experiences.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-paint-brush"></i>
-          <h3>Creative Design</h3>
-          <p>High-quality creative visuals and branding.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-briefcase"></i>
-          <h3>Business Setup</h3>
-          <p>Complete business and startup solutions.</p>
-        </div>
+    <div class="service-grid">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Brand Strategy & Identity</h3>
+        <p>Building strong, memorable brands with clarity and purpose.</p>
+        <ul>
+          <li>Brand identity design</li>
+          <li>Logo & visual system</li>
+          <li>Brand guidelines & positioning</li>
+          <li>Packaging & brand assets</li>
+        </ul>
       </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <i class="fas fa-share-alt"></i>
+        <h3>Social Media & Marketing</h3>
+        <p>Creating impactful content that attracts, engages, and converts.</p>
+        <ul>
+          <li>Social media posts & carousels</li>
+          <li>Ad creatives & campaign visuals</li>
+          <li>Content strategy & planning</li>
+          <li>Social media optimization (SMO)</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <i class="fas fa-video"></i>
+        <h3>Video & Motion Content</h3>
+        <p>Bringing your brand to life through motion and storytelling.</p>
+        <ul>
+          <li>Reels, shorts & ad videos</li>
+          <li>Motion graphics & animation</li>
+          <li>Promotional & brand videos</li>
+          <li>Sound design & storytelling</li>
+        </ul>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <i class="fas fa-globe"></i>
+        <h3>Web & UI/UX Design</h3>
+        <p>Designing user-focused digital experiences that convert.</p>
+        <ul>
+          <li>High-converting landing pages</li>
+          <li>Complete website design</li>
+          <li>SaaS dashboards & interfaces</li>
+          <li>User experience optimization</li>
+        </ul>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Creative Design</h3>
+        <p>High-quality visual designs that strengthen your brand presence.</p>
+        <ul>
+          <li>Social media creatives</li>
+          <li>Marketing & ad designs</li>
+          <li>Posters, banners & graphics</li>
+          <li>Brand visual consistency</li>
+        </ul>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Business Setup</h3>
+        <p>Complete solutions to launch and grow your business professionally.</p>
+        <ul>
+          <li>Company registration guidance</li>
+          <li>Branding & business identity</li>
+          <li>Digital presence setup</li>
+          <li>Marketing & growth strategy</li>
+        </ul>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+  
 
   <section id="work" class="work section">
     <div class="container">
