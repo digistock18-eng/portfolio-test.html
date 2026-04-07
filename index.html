@@ -815,20 +815,19 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 cards.forEach(card => observer.observe(card));
-</script>
-  <script>
-const cards = document.querySelectorAll('.focus-card');
+<script>
+const workCards = document.querySelectorAll('.work-card');
 
-function updateFocus() {
+function updateWorkFocus() {
   let center = window.innerHeight / 2;
 
-  cards.forEach(card => {
+  workCards.forEach(card => {
     let rect = card.getBoundingClientRect();
     let cardCenter = rect.top + rect.height / 2;
 
     let distance = Math.abs(center - cardCenter);
 
-    if (distance < 150) {
+    if (distance < 120) {
       card.classList.add('active');
       card.classList.remove('blur');
     } else {
@@ -838,11 +837,8 @@ function updateFocus() {
   });
 }
 
-window.addEventListener('scroll', updateFocus);
-window.addEventListener('load', updateFocus);
-    <script>
-const workCards = document.querySelectorAll('.work-card');
- 
+window.addEventListener('scroll', updateWorkFocus);
+window.addEventListener('load', updateWorkFocus);
 </script>
 </body>
 body {
