@@ -413,7 +413,19 @@
         font-size: 2rem;
       }
     }
+    /* SAFETY LOCK */
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
     html {
       scroll-behavior: smooth;
     }
