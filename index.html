@@ -533,6 +533,24 @@ img {
     html {
       scroll-behavior: smooth;
     }
+    /* MOBILE STACK EFFECT */
+@media (max-width: 768px) {
+
+  .work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-card {
+    position: sticky;
+    top: 100px;
+    width: 90%;
+    margin-bottom: 40px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+}
   </style>
 </head>
 
@@ -773,6 +791,25 @@ function updateFocus() {
 
 window.addEventListener('scroll', updateFocus);
 window.addEventListener('load', updateFocus);
+    <script>
+const workCards = document.querySelectorAll('.work-card');
+
+function stackEffect() {
+  let scrollY = window.scrollY;
+
+  workCards.forEach((card, index) => {
+    let offset = index * 100;
+
+    if (scrollY > offset) {
+      card.style.transform = `translateY(${index * -20}px) scale(${1 - index * 0.05})`;
+      card.style.opacity = 1 - index * 0.1;
+    }
+  });
+}
+
+window.addEventListener('scroll', stackEffect);
+</script>
+  
 </script>
 </body>
 
