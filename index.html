@@ -42,19 +42,19 @@
       padding: 0 1rem;
     }
     
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+  .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 
-      background: rgba(0, 31, 63, 0.6); /* navy glass */
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 31, 63, 0.4) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
 
-     border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 
-     transition: all 0.3s ease;
-     }
+  transition: all 0.3s ease;
+}
     
     .nav-flex {
       display: flex;
@@ -68,9 +68,8 @@
     }
 
     .nav-menu {
-      display: flex;
-      gap: 1rem;
-    }
+  background: rgba(0, 31, 63, 0.9);
+}
 
     nav a {
       margin: 0 0.5rem;
