@@ -844,22 +844,6 @@ function updateWorkFocus() {
   });
 }
 
-window.addEventListener('scroll', updateWorkFocus);
-window.addEventListener('load', updateWorkFocus);
-</script>
-</body>
-  
-  <script>
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-</script>
 body {
   overflow-x: hidden;
 }
